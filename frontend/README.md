@@ -29,3 +29,19 @@ npm run serve
 ```
 
 ## Cheers !!!
+
+## To run with DOCKER
+
+### Build the image
+
+```bash
+docker build -t health-frontend .
+```
+
+### Run the Cntainer
+
+```bash
+docker run -p 8080:80 health-frontend
+```
+
+After running this command, the application should be accessible at `http://localhost:8080`
