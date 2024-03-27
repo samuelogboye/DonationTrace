@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/usr/src/app
+    ports:
+      - "8000:8000"
+    environment:
+      - NAME=World
+
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
