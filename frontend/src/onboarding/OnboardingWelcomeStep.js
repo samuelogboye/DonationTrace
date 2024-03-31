@@ -1,7 +1,7 @@
 import React from "react";
 import onboardingImage2 from "../image_assets/undraw_welcome_re_h3d9 1.svg";
 import frame from "../image_assets/Frame.svg";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const OnboardingWelcomeStep = () => {
   return (
@@ -13,9 +13,11 @@ const OnboardingWelcomeStep = () => {
             Welcome to <span className="text-primary-100">HealthSync</span> -
             Your Personal Health Companion
           </div>
-          <button className="bg-primary-100 w-96 h-16 rounded-full text-white mb-4">
-            Get Started
-          </button>
+          <Link to="/sign-up">
+            <button className="bg-primary-100 w-96 h-16 rounded-full text-white mb-4">
+              Get Started
+            </button>
+          </Link>
           <NavLink to="/login">
             <div>
               Already Have an Account?{" "}
